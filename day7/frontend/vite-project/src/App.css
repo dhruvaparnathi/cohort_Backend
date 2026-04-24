@@ -1,0 +1,68 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App background */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  color: white;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Grid layout */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Note card */
+.note-card {
+  background: #2f2f4a;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.note-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: #3b3b5f;
+}
+
+/* Title */
+.note-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #00d4ff;
+}
+
+/* Content */
+.note-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  color: #aaa;
+}
