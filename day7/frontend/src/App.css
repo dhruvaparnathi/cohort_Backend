@@ -1,0 +1,167 @@
+/* Background */
+.app {
+  min-height: 100vh;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.note-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.note-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.note-form button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #00d4ff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.note-form button:hover {
+  background: #00aacc;
+}
+
+/* Grid */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.note-card {
+  background: rgb(9, 39, 67);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.note-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+/* Actions */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Empty */
+.empty {
+  text-align: center;
+  grid-column: 1 / -1;
+  color: #94a3b8;
+}
+
+/* Update button */
+.update-btn {
+  background: #22c55e;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.update-btn:hover {
+  background: #16a34a;
+}
+
+/* Modal background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.modal-content {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+}
+
+/* Modal inputs */
+.modal-content input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Modal buttons */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background: #00d4ff;
+}
+
+.modal-actions button:last-child {
+  background: #ef4444;
+  color: white;
+}
