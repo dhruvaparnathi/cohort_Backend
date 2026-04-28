@@ -2,6 +2,7 @@ const app = require('./src/app');
 require('dotenv').config();
 const connectToDb = require('./src/config/database');
 const noteModel = require('./src/models/note.model');
+const path = require("path");
 
 connectToDb();
 
@@ -51,9 +52,8 @@ app.patch("/api/notes/:id",async (req,res)=>{
 })
 
 
-
-app.get("/",(req,res)=>{
-    res.send("Server is Active...");
+app.use('*name',(req,res)=>{
+    res.sendFile(path.join(__dirname,"..","/public/index.html"))
 })
 
 app.listen(3000,()=>{
