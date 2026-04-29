@@ -37,6 +37,19 @@ authRoutes.post("/register",async (req,res)=>{
     })
 })
 
+authRoutes.get("get-me",async (req,res)=>{
+    const token = req.cookies.token;
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const user = await userModel.findById(decoded.id);
+
+    res.json({
+        name:user.name,
+        email:user.email,
+    })
+})
+
 authRoutes.post("/login",async (req,res)=>{
     const { email, password } = req.body;
 
